@@ -99,7 +99,7 @@ resources:
     DynamoDbTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: users
+        TableName: pointless-bot-users
         AttributeDefinitions:
           - AttributeName: fbid
             AttributeType: S
@@ -123,6 +123,6 @@ resources:
                 - dynamodb:PutItem
                 - dynamodb:UpdateItem
                 - dynamodb:UpdateTable
-              Resource: arn:aws:dynamodb:*:*:table/users
+              Resource: arn:aws:dynamodb:*:*:table/pointless-bot-users
         Roles:
           - Ref: IamRoleLambdaExecution

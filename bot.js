@@ -4,7 +4,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments)).next());
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
@@ -48,7 +48,7 @@ module.exports = builder(function (message, apiRequest) {
                     return __generator(this, function (_a) {
                         switch (_a.label) {
                             case 0: return [4 /*yield*/, dynamo_1.get({
-                                    TableName: 'users',
+                                    TableName: 'pointless-bot-users',
                                     Key: { fbid: message.sender },
                                     ConsistentRead: true
                                 }).promise()];
@@ -64,7 +64,7 @@ module.exports = builder(function (message, apiRequest) {
                     return __generator(this, function (_a) {
                         switch (_a.label) {
                             case 0: return [4 /*yield*/, dynamo_1.put({
-                                    TableName: 'users',
+                                    TableName: 'pointless-bot-users',
                                     Item: { fbid: message.sender, state: state }
                                 }).promise()];
                             case 1:

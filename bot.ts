@@ -12,7 +12,7 @@ export = builder((message: Message, apiRequest: Request) => {
         const dialogue = new Dialogue(onboarding, {
             async retrieve() {
                  const user = await dynamo.get({
-                     TableName: 'users', 
+                     TableName: 'pointless-bot-users', 
                      Key: { fbid: message.sender }, 
                      ConsistentRead: true 
                     }).promise();
@@ -20,7 +20,7 @@ export = builder((message: Message, apiRequest: Request) => {
             },
             async store(state: Object) {
                 await dynamo.put({
-                    TableName: 'users',
+                    TableName: 'pointless-bot-users',
                     Item: { fbid: message.sender, state: state }
                 }).promise();
             }
