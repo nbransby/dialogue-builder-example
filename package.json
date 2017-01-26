@@ -6,7 +6,7 @@
   "dependencies": {
     "aws-sdk": "^2.7.21",
     "claudia-bot-builder": "^2.12.0",
-    "dialogue-builder": "^0.1.1",
+    "dialogue-builder": "^0.1.3",
     "serverless-plugin-stage-variables": "^1.6.6"
   },
   "devDependencies": {
