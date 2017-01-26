@@ -1,0 +1,29 @@
+{
+  "name": "pointless-bot",
+  "version": "1.0.0",
+  "description": "Will be consumed by the Facebook Messenger webhook",
+  "main": "bot.js",
+  "dependencies": {
+    "aws-sdk": "^2.7.21",
+    "claudia-bot-builder": "^2.12.0",
+    "dialogue-builder": "^0.1.1",
+    "serverless-plugin-stage-variables": "^1.6.6"
+  },
+  "devDependencies": {
+    "typescript": "^2.1.5"
+  },
+  "scripts": {
+    "deploy": "tsc && serverless deploy",
+    "stage": "tsc && serverless deploy function -f pointless-bot -l"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbransby/dialogue-builder-example.git"
+  },
+  "author": "Nicholas Bransby-Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nbransby/dialogue-builder-example/issues"
+  },
+  "homepage": "https://github.com/nbransby/dialogue-builder-example#readme"
+}
