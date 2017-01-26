@@ -10,23 +10,19 @@ Dialogue Builder depends on [bot-builder](https://github.com/claudiajs/claudia-b
 
 #### To deploy this example so you can test it in Facebook Messenger you will need to do the following:
 
-* #####Create a Facebook App and Page
-> Create a new [Facebook App](https://developers.facebook.com/apps) and [Page](https://www.facebook.com/pages/create) or use existing ones. Go to the App Dashboard and under Product Settings click "Add Product" and select "Messenger."
+* #####Create a Facebook App
+> Create a new [Facebook App](https://developers.facebook.com/apps) or use an existing one. In the `serverless.yml` file, replace `REPLACE_WITH_APP_SECRET` with your Facebook App Secret
+
+* #####Create a Facebook Page
+> Create a new [Page](https://www.facebook.com/pages/create) or use an existing one, then go to the App Dashboard and under Product Settings click "Add Product" and select "Messenger."
 > 
 ![step1](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12995587_195576307494663_824949235_n.png)
-
-* #####In the `serverless.yml` file, replace `REPLACE_WITH_APP_SECRET` with your Facebook App Secret
-
-        facebookAppSecret: REPLACE_WITH_APP_SECRET
-
-* #####Get a Page Access Token from Facebook
-> In the Token Generation section, select your Page. A Page Access Token will be generated for you. Copy this Page Access Token. Note: The generated token will NOT be saved in this UI. Each time you select that Page a new token will be generated. However, any previous tokens created will continue to function.
+> 
+In the Token Generation section, select your Page. A Page Access Token will be generated for you. 
 > 
 ![step3](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12995543_1164810200226522_2093336718_n.png)
-* #####In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your Page Access Token
-
-        facebookAccessToken: REPLACE_WITH_PAGE_ACCESS_TOKEN
-
+> 
+In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your Page Access Token
 
 * #####Install serverless and setup your AWS account credentials on your machine
 > https://serverless.com/framework/docs/providers/aws/guide/installation/
