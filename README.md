@@ -1,6 +1,6 @@
 # dialogue-builder-example
 
-A working example of a bot utilising dialogue-builder including persistance of dialogue state.The
+A working example of a bot utilising dialogue-builder including persistance of dialogue state.
 
 This example is written in TypeScript and consists of two files `bot.ts` and `onboarding.ts`, (`bot.js` and `onboarding.js` contain the transpiled TypeScript - not a pretty sight). 
 
