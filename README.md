@@ -29,6 +29,7 @@ In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your 
 
 * #####Run the following in the root of this directory and, once complete, copy the URL returned
 
+        npm install
         serverless deploy
 
 * #####Setup the Webhook on Facebook with the URL as the Callback URL and `SOMETHING_RANDOM` as the verify token
