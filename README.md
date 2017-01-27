@@ -25,7 +25,9 @@ In the Token Generation section, select your Page. A Page Access Token will be g
 In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your Page Access Token
 
 * #####Install serverless and setup your AWS account credentials on your machine
-> https://serverless.com/framework/docs/providers/aws/guide/installation/
+> https://serverless.com/framework/docs/providers/aws/guide/installation/ 
+> 
+Make sure to also follow [these instructions](https://serverless.com/framework/docs/providers/aws/guide/credentials) on setting up AWS credentials
 
 * #####Run the following in the root of this directory and, once complete, copy the URL returned
 
