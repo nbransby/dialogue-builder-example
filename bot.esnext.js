@@ -8,31 +8,29 @@ module.exports = builder((message, apiRequest) => {
     try {
         const dynamo = new DynamoDB.DocumentClient();
 
-        const dialogue = new Dialogue(onboarding, {
+        const storage = {
             async retrieve() {
                 const user = await dynamo.get({
-                    TableName: 'users',
+                    TableName: 'pointless-bot-users',
                     Key: { fbid: message.sender },
                     ConsistentRead: true
                 }).promise();
-                return user.Item['state'];
+                return user.Item && user.Item['state'];
             },
             async store(state) {
                 await dynamo.put({
-                    TableName: 'users',
+                    TableName: 'pointless-bot-users',
                     Item: { fbid: message.sender, state: state }
                 }).promise();
             }
-        }, message.sender);
+        };
+
+        const dialogue = new Dialogue(onboarding, storage, message.sender);
 
         dialogue.setKeywordHandler(['back', 'undo'], 'undo');
         dialogue.setKeywordHandler('reset', 'restart');
-
-        const messages = dialogue.consume(message);
-        if (dialogue.isComplete) {
-            //do something
-        }
-        return messages;
+        
+        return dialogue.consume(message).catch(() => ['I have said all I have to say']);
     }
     catch (error) {
         return `${error} at ${error.stack}`;
