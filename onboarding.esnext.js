@@ -10,6 +10,7 @@ exports.default = dialogue('Onboarding ', (fbid) => [
     expect `My age is`, {
         [onText]: (text) => console.log(`User's age is ${text}`)
     },
+
     ask `What length is your hair?`,
     expect `My hair length is`, {
         'Long': (text) => console.log(`User's hair is ${text}`),
@@ -19,16 +20,20 @@ exports.default = dialogue('Onboarding ', (fbid) => [
             return goto `after_hair_colour`;
         },
     },
+
     ask `What colour is your hair?`,
     expect `My hair colour is`, {
         'Black': (text) => console.log(`User's hair colour is ${text}`),
         'Brown': (text) => console.log(`User's hair colour is ${text}`),
         'Blonde': (text) => console.log(`User's hair colour is ${text}`),
     },
+
     'after_hair_colour',
+
     ask `Where do you live?`,
     expect `I live at`, {
         [location]: (lat, long, title, url) => console.log(`User located at ${lat}, ${long}`)
     },
+    
     say `Thanks ${fbid}, have a nice day`,
 ]);
