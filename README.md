@@ -41,14 +41,14 @@ Make sure to also follow [these instructions](https://serverless.com/framework/d
 > 
 Enter a URL for a webhook, enter a Verify Token and select `messages` and `messaging_postbacks` under Subscription Fields.
 >
-![subscription](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/12057143_211110782612505_894181129_n.png)
+![subscription](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/12057143_211110782612505_894181129_n.png?oh=132ce46ea1a96b8a91cbe387492943b5&oe=593C4AF1)
 
 * #####Subscribe the App to the Page on Facebook
 > In the Webhooks section, you can subscribe the webhook for a specific page.
 > 
-> ![enter image description here](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/13421551_1702530599996541_471321650_n.png)
+> ![enter image description here](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/13421551_1702530599996541_471321650_n.png?oh=75f68bbf43a5a25d98464babc1232a25&oe=5939AA9F)
 
 * #####Try your new bot
 >Go to your Facebook Page and send a message to it. The bot should respond!
 >
-![page](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/13331537_288414224831849_853132949_n.png)
+![page](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/13331537_288414224831849_853132949_n.png?oh=5f381f9f42de44be26539da6ed663d09&oe=5930C11B)
