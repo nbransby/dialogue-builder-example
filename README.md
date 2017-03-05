@@ -16,11 +16,11 @@ Dialogue Builder depends on [bot-builder](https://github.com/claudiajs/claudia-b
 * #####Create a Facebook Page
 > Create a new [Page](https://www.facebook.com/pages/create) or use an existing one, then go to the App Dashboard and under Product Settings click "Add Product" and select "Messenger."
 > 
-![step1](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12995587_195576307494663_824949235_n.png)
+![step1](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/12995587_195576307494663_824949235_n.png?oh=c2d8210d366a5650df958c86a08792c5&oe=596749C3)
 > 
 In the Token Generation section, select your Page. A Page Access Token will be generated for you. 
 > 
-![step3](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12995543_1164810200226522_2093336718_n.png)
+![step3](https://scontent-ams3-1.xx.fbcdn.net/v/t39.2178-6/12995543_1164810200226522_2093336718_n.png?oh=582e1b57f6e9b3f67f5a007d887d5fb8&oe=59329209)
 > 
 In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your Page Access Token
 
