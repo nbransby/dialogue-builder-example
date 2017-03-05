@@ -14,10 +14,7 @@ export default dialogue('Onboarding ', (fbid: string) => [
     expect `My hair length is`, {
         'Long': (text: string) => console.log(`User's hair is ${text}`),
         'Short': (text: string) => console.log(`User's hair is ${text}`),
-        'Shaved': (text: string) => {
-            console.log(`User's hair is ${text}`);
-            return goto `after_hair_colour`;
-        },
+        'Shaved': (text: string) => console.log(`User's hair is ${text}`) || goto `after_hair_colour`
     },
 
     ask `What colour is your hair?`,

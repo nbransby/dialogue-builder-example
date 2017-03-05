@@ -30,7 +30,7 @@ module.exports = builder((message, apiRequest) => {
         dialogue.setKeywordHandler(['back', 'undo'], 'undo');
         dialogue.setKeywordHandler('reset', 'restart');
         
-        return dialogue.consume(message).catch(() => ['I have said all I have to say']);
+        return dialogue.consume(message, apiRequest).catch(() => ['I have said all I have to say']);
     }
     catch (error) {
         return `${error} at ${error.stack}`;

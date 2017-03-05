@@ -5,8 +5,8 @@
   "main": "bot.js",
   "dependencies": {
     "aws-sdk": "^2.9.0",
-    "claudia-bot-builder": "^2.12.0",
-    "dialogue-builder": "^0.2.0",
+    "claudia-bot-builder": "^2.14.0",
+    "dialogue-builder": "^0.3.0",
     "serverless-plugin-stage-variables": "^1.6.6"
   },
   "devDependencies": {

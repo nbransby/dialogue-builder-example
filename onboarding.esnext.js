@@ -15,10 +15,7 @@ exports.default = dialogue('Onboarding ', (fbid) => [
     expect `My hair length is`, {
         'Long': (text) => console.log(`User's hair is ${text}`),
         'Short': (text) => console.log(`User's hair is ${text}`),
-        'Shaved': (text) => {
-            console.log(`User's hair is ${text}`);
-            return goto `after_hair_colour`;
-        },
+        'Shaved': (text) => console.log(`User's hair is ${text}`) || goto `after_hair_colour`
     },
 
     ask `What colour is your hair?`,

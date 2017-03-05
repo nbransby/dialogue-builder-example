@@ -31,7 +31,7 @@ export = builder(async (message: Message, apiRequest: Request) => {
         dialogue.setKeywordHandler(['back', 'undo'], 'undo');
         dialogue.setKeywordHandler('reset', 'restart');
 
-        return dialogue.consume(message).catch(() => ['I have said all I have to say']);
+        return dialogue.consume(message, apiRequest).catch(() => ['I have said all I have to say']);
 
     } catch(error) {
         console.log(error);
