@@ -29,7 +29,7 @@ In the `serverless.yml` file, replace`REPLACE_WITH_PAGE_ACCESS_TOKEN` with your 
 > 
 Make sure to also follow [these instructions](https://serverless.com/framework/docs/providers/aws/guide/credentials) on setting up AWS credentials
 
-* #####Run the following in the root of this directory and, once complete, copy the URL returned
+* #####Run the following in the root of this directory (npm version 4.x or higher) and, once complete, copy the URL returned
 
         npm install
         serverless deploy
